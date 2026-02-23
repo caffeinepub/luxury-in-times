@@ -1,0 +1,381 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 9,
+  "summary": "Luxury watch e-commerce platform called 'Luxury In Times' with homepage, product listings, search/filters, shopping cart, and admin panel. Black/gold/white luxury design. Backend uses Internet Computer canisters (Motoko). Admin panel at /admin with password 'GRANTH'. Multiple photo upload system with up to 5 images per watch and product detail pages with image carousel/gallery.",
+  "architectural_notes": [
+    "Backend: Motoko canisters on Internet Computer for product data storage",
+    "Frontend: React/TypeScript with luxury black/gold/white color palette",
+    "Admin authentication: Simple password-based (password: GRANTH)",
+    "Contact page: New route at /contact displaying phone number +91 7572939000 with tel: link",
+    "Product images: Array of up to 5 image URLs per watch, first image is primary thumbnail",
+    "Product detail page: Dedicated route for each watch with image carousel/gallery"
+  ],
+  "known_issues": [
+    "\"Failed to load products\" error on products page - no sample watches seeded in backend yet"
+  ],
+  "isFixRequest": true,
+  "existing_features": [
+    {
+      "id": "feature-create-homepage-with-hero-section-displaying-brand-name-luxury-in-times-tagline-timeless-elegance-defined-luxury-background-image-and-shop-now-call-to-action-button-that-navigates-to-product-listing-page",
+      "title": "Create homepage with hero section displaying brand name 'Luxury In Times', tagline 'Timeless Elegance. Defined.', luxury background image, and 'Shop Now' call-to-action button that navigates to product listing page",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-featured-watches-section-to-homepage-displaying-a-curated-selection-of-watches-with-images-names-and-prices",
+      "title": "Add featured watches section to homepage displaying a curated selection of watches with images, names, and prices",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-instagram-link-section-on-homepage-with-clickable-link-button-to-luxury-in-times-profile-that-opens-in-new-tab",
+      "title": "Create Instagram link section on homepage with clickable link/button to @luxury_in_times profile that opens in new tab",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-premium-footer-with-sections-for-about-contact-instagram-link-and-copyright-notice",
+      "title": "Create premium footer with sections for About, Contact, Instagram link, and copyright notice",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-product-listing-page-with-grid-layout-displaying-all-watches-where-each-product-card-shows-watch-image-watch-name-company-name-model-number-price-gender-men-women-unisex-and-add-to-cart-button",
+      "title": "Create product listing page with grid layout displaying all watches, where each product card shows watch image, watch name, company name, model number, price, gender (Men/Women/Unisex), and Add to Cart button",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-search-bar-at-top-of-product-listing-page-allowing-users-to-search-watches-by-model-number-company-name-or-watch-name-with-real-time-filtering",
+      "title": "Add search bar at top of product listing page allowing users to search watches by model number, company name, or watch name with real-time filtering",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-filters-sidebar-on-product-listing-page-with-price-range-slider-min-max-gender-filter-men-women-unisex-brand-company-filter-and-sort-by-price-options-low-to-high-high-to-low",
+      "title": "Create filters sidebar on product listing page with price range slider (min-max), gender filter (Men/Women/Unisex), brand/company filter, and sort by price options (Low to High/High to Low)",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-shopping-cart-page-displaying-added-watches-with-ability-to-increase-decrease-quantity-remove-items-view-total-price-and-proceed-to-checkout",
+      "title": "Create shopping cart page displaying added watches with ability to increase/decrease quantity, remove items, view total price, and proceed to checkout",
+      "reqIds": [
+        "REQ-9"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-add-to-cart-functionality-on-product-cards-that-adds-selected-watch-to-cart-and-updates-cart-count-indicator",
+      "title": "Implement Add to Cart functionality on product cards that adds selected watch to cart and updates cart count indicator",
+      "reqIds": [
+        "REQ-10"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-admin-panel-at-route-admin-with-password-protection-requiring-password-granth-to-access-admin-functionality",
+      "title": "Create admin panel at route /admin with password protection requiring password 'GRANTH' to access admin functionality",
+      "reqIds": [
+        "REQ-11"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-admin-panel-create-form-to-add-new-watches-with-fields-for-watch-name-company-model-number-price-gender-description-and-image-upload-capability",
+      "title": "In admin panel, create form to add new watches with fields for watch name, company, model number, price, gender, description, and image upload capability",
+      "reqIds": [
+        "REQ-12"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-in-admin-panel-display-list-of-all-existing-watches-with-edit-and-delete-buttons-for-each-watch",
+      "title": "In admin panel, display list of all existing watches with edit and delete buttons for each watch",
+      "reqIds": [
+        "REQ-13"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-edit-functionality-in-admin-panel-allowing-modification-of-watch-name-company-model-number-price-gender-description-and-image-replacement",
+      "title": "Implement edit functionality in admin panel allowing modification of watch name, company, model number, price, gender, description, and image replacement",
+      "reqIds": [
+        "REQ-14"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-delete-functionality-in-admin-panel-to-remove-watches-from-the-system-with-confirmation-dialog",
+      "title": "Implement delete functionality in admin panel to remove watches from the system with confirmation dialog",
+      "reqIds": [
+        "REQ-15"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-black-gold-and-white-color-palette-throughout-the-application-with-elegant-serif-headings-smooth-hover-effects-on-interactive-elements-and-premium-button-animations",
+      "title": "Apply black, gold, and white color palette throughout the application with elegant serif headings, smooth hover effects on interactive elements, and premium button animations",
+      "reqIds": [
+        "REQ-16"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-ensure-entire-application-is-fully-responsive-with-clean-luxury-layout-optimized-for-both-mobile-and-desktop-viewports",
+      "title": "Ensure entire application is fully responsive with clean luxury layout optimized for both mobile and desktop viewports",
+      "reqIds": [
+        "REQ-17"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-design-and-apply-a-cohesive-luxury-visual-theme-with-sophisticated-color-combinations-beyond-basic-black-gold-white-refined-typography-hierarchy-with-elegant-serif-and-sans-serif-pairings-and-tasteful-spacing-that-emphasizes-premium-quality-throughout-the-interface",
+      "title": "Design and apply a cohesive luxury visual theme with sophisticated color combinations beyond basic black/gold/white, refined typography hierarchy with elegant serif and sans-serif pairings, and tasteful spacing that emphasizes premium quality throughout the interface",
+      "reqIds": [
+        "REQ-18"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-apply-black-backgrounds-to-all-buttons-throughout-the-application-including-shop-now-button-on-homepage-add-to-cart-buttons-on-product-cards-filter-buttons-in-filtersidebar-sort-by-price-buttons-admin-panel-buttons-add-watch-edit-delete-logout-and-any-other-interactive-buttons-maintaining-gold-text-color-and-hover-effects-consistent-with-luxury-theme",
+      "title": "Apply black backgrounds to all buttons throughout the application including Shop Now button on homepage, Add to Cart buttons on product cards, filter buttons in FilterSidebar, sort by price buttons, admin panel buttons (Add Watch, Edit, Delete, Logout), and any other interactive buttons, maintaining gold text color and hover effects consistent with luxury theme",
+      "reqIds": [
+        "REQ-19"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-enhance-the-visibility-and-styling-of-sort-by-price-options-low-to-high-and-high-to-low-in-the-filtersidebar-component-to-make-them-more-prominent-and-easier-to-identify",
+      "title": "Enhance the visibility and styling of sort by price options (Low to High and High to Low) in the FilterSidebar component to make them more prominent and easier to identify",
+      "reqIds": [
+        "REQ-20"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-contact-phone-number-91-7572939000-to-the-footer-component-in-the-contact-section-as-a-clickable-tel-link-for-mobile-calling",
+      "title": "Add contact phone number '+91 7572939000' to the Footer component in the Contact section as a clickable tel: link for mobile calling",
+      "reqIds": [
+        "REQ-21"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-dedicated-contact-page-at-route-contact-displaying-the-contact-phone-number-91-7572939000-as-a-clickable-tel-link-with-luxury-styling-consistent-with-the-brand-theme",
+      "title": "Create a dedicated Contact page at route /contact displaying the contact phone number '+91 7572939000' as a clickable tel: link with luxury styling consistent with the brand theme",
+      "reqIds": [
+        "REQ-22"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-instagram-id-from-luxury-in-times-to-luxury-in-times-with-underscore-at-the-end-in-all-locations-including-the-instagramsection-component-on-homepage-footer-component-instagram-link-and-any-other-references-throughout-the-application",
+      "title": "Update Instagram ID from '@luxury_in_times' to '@luxury_in_times_' (with underscore at the end) in all locations including the InstagramSection component on homepage, Footer component Instagram link, and any other references throughout the application",
+      "reqIds": [
+        "REQ-23"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-addwatchform-component-to-support-uploading-up-to-5-images-per-watch-with-multiple-file-input-displaying-preview-thumbnails-for-each-uploaded-image-and-submitting-all-images-as-an-array-to-the-backend",
+      "title": "Update AddWatchForm component to support uploading up to 5 images per watch with multiple file input, displaying preview thumbnails for each uploaded image, and submitting all images as an array to the backend",
+      "reqIds": [
+        "REQ-27"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-editwatchmodal-component-to-support-uploading-multiple-replacement-images-up-to-5-total-displaying-existing-images-with-option-to-remove-individual-images-and-maintaining-image-array-on-backend-update",
+      "title": "Update EditWatchModal component to support uploading multiple replacement images (up to 5 total), displaying existing images with option to remove individual images, and maintaining image array on backend update",
+      "reqIds": [
+        "REQ-28"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-productcard-component-to-display-the-first-image-from-the-images-array-as-the-primary-thumbnail-on-product-listing-cards",
+      "title": "Update ProductCard component to display the first image from the images array as the primary thumbnail on product listing cards",
+      "reqIds": [
+        "REQ-29"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-productdetailpage-component-at-route-products-id-that-displays-full-watch-details-including-name-company-model-price-gender-description-and-an-elegant-image-carousel-gallery-showing-all-watch-photos-with-smooth-transitions-and-luxury-styling",
+      "title": "Create a ProductDetailPage component at route /products/:id that displays full watch details including name, company, model, price, gender, description, and an elegant image carousel/gallery showing all watch photos with smooth transitions and luxury styling",
+      "reqIds": [
+        "REQ-30"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-productcard-component-to-be-clickable-and-navigate-to-the-product-detail-page-at-products-id-when-clicked",
+      "title": "Update ProductCard component to be clickable and navigate to the product detail page at /products/:id when clicked",
+      "reqIds": [
+        "REQ-31"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-featuredwatches-component-to-display-the-first-image-from-images-array-for-each-featured-watch",
+      "title": "Update FeaturedWatches component to display the first image from images array for each featured watch",
+      "reqIds": [
+        "REQ-32"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-update-watchmanagementlist-component-in-admin-panel-to-display-the-first-image-from-images-array-as-thumbnail-for-each-watch-in-the-management-list",
+      "title": "Update WatchManagementList component in admin panel to display the first image from images array as thumbnail for each watch in the management list",
+      "reqIds": [
+        "REQ-33"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Homepage with hero section, brand name, tagline, featured watches, Shop Now button, Instagram link, and premium footer",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Product listing page with grid layout showing watch image, name, company, model number, price, gender, and Add to Cart button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Search functionality by model number, company name, and watch name",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-4",
+      "summary": "Filters sidebar with price range slider, gender filter, brand filter, and sort by price options",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-5",
+      "summary": "Shopping cart page with quantity controls, remove items, total price display, and checkout button",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-6",
+      "summary": "Admin panel at /admin with password protection (password: GRANTH) to add/edit/delete watches with image upload and all product details",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Black, gold, and white luxury design with elegant serif headings, smooth hover effects, premium button animations, and responsive layout",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-8",
+      "summary": "Backend storage using Internet Computer canisters (Motoko) for product data persistence",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-14",
+      "summary": "Implement backend Motoko actor to store and manage watch products with fields: id, name, company, modelNumber, price, gender, description, and imageUrl",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-15",
+      "summary": "Add black backgrounds to all buttons (Shop Now, Add to Cart, filter buttons, sort buttons, admin buttons)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-16",
+      "summary": "Enhance sort by price visibility (Low to High / High to Low options)",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-17",
+      "summary": "Add contact number +91 7572939000 to footer and create dedicated Contact page with clickable tel: link",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-18",
+      "summary": "Update Instagram ID from @luxury_in_times to @luxury_in_times_ across all locations",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-19",
+      "summary": "Add sample luxury watches to the backend main.mo actor to populate the product catalog with at least 6-8 premium watch products including brands like Rolex, Omega, Patek Philippe, Cartier, TAG Heuer, and Breitling. Each watch must include: name, company, model number, price (ranging from $5,000 to $50,000), gender (Men/Women/Unisex), description highlighting luxury features, and imageUrl pointing to appropriate watch images.",
+      "reqIds": [
+        "REQ-24"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-20",
+      "summary": "Mark 3-4 of the sample watches as featured products so they appear in the Featured Watches section on the homepage",
+      "reqIds": [
+        "REQ-25"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-21",
+      "summary": "Add multiple photo upload capability in admin panel supporting up to 5 images per watch with image array storage in Motoko backend",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-22",
+      "summary": "Create product detail pages with elegant image carousel/gallery displaying all watch photos with smooth transitions and luxury styling",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-23",
+      "summary": "Modify backend Watch type in main.mo to store images as an array of Blob values (images: [Blob]) instead of a single image, supporting up to 5 images per watch",
+      "reqIds": [
+        "REQ-26"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-31",
+      "summary": "Create migration.mo file to migrate existing watches with single image field to new images array structure, preserving existing watch data",
+      "reqIds": [
+        "REQ-34"
+      ],
+      "status": "pending"
+    }
+  ],
+  "gameProjectType": "none",
+  "projectName": "Luxury In Times",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

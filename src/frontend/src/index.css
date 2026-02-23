@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --radius: 0.5rem;
+        
+        /* Luxury Black Palette */
+        --luxury-black: 0 0% 0%;
+        --luxury-charcoal: 0 0% 16%;
+        
+        /* Luxury Gold Palette */
+        --luxury-gold: 45 100% 51%;
+        --luxury-champagne: 45 56% 88%;
+        --luxury-dark-gold: 38 44% 45%;
+        
+        /* Luxury White/Neutral Palette */
+        --luxury-white: 0 0% 100%;
+        --luxury-ivory: 60 29% 96%;
+        --luxury-warm-gray: 0 0% 90%;
+        
+        /* Design System Colors (OKLCH) */
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.205 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.85 0.15 85;
+        --primary-foreground: 0.145 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.85 0.15 85;
+        --accent-foreground: 0.145 0 0;
+        --destructive: 0.577 0.245 27.325;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.85 0.15 85 / 20%;
+        --input: 0.85 0.15 85 / 30%;
+        --ring: 0.85 0.15 85;
+        --chart-1: 0.646 0.222 41.116;
+        --chart-2: 0.6 0.118 184.704;
+        --chart-3: 0.398 0.07 227.392;
+        --chart-4: 0.828 0.189 84.429;
+        --chart-5: 0.769 0.188 70.08;
+    }
+
+    .dark {
+        --background: 0.145 0 0;
+        --foreground: 0.985 0 0;
+        --card: 0.205 0 0;
+        --card-foreground: 0.985 0 0;
+        --popover: 0.205 0 0;
+        --popover-foreground: 0.985 0 0;
+        --primary: 0.85 0.15 85;
+        --primary-foreground: 0.145 0 0;
+        --secondary: 0.269 0 0;
+        --secondary-foreground: 0.985 0 0;
+        --muted: 0.269 0 0;
+        --muted-foreground: 0.708 0 0;
+        --accent: 0.85 0.15 85;
+        --accent-foreground: 0.145 0 0;
+        --destructive: 0.704 0.191 22.216;
+        --destructive-foreground: 0.985 0 0;
+        --border: 0.85 0.15 85 / 20%;
+        --input: 0.85 0.15 85 / 30%;
+        --ring: 0.85 0.15 85;
+    }
+
+    * {
+        @apply border-border;
+    }
+    
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', Georgia, serif;
+        font-weight: 700;
+        letter-spacing: -0.02em;
+    }
+    
+    .font-serif {
+        font-family: 'Playfair Display', Georgia, serif;
+    }
+}
+
+@layer utilities {
+    .shadow-luxury {
+        box-shadow: 0 10px 40px -10px oklch(var(--luxury-gold) / 0.4);
+    }
+    
+    .text-luxury-black {
+        color: oklch(var(--luxury-black));
+    }
+    
+    .text-luxury-charcoal {
+        color: oklch(var(--luxury-charcoal));
+    }
+    
+    .text-luxury-gold {
+        color: oklch(var(--luxury-gold));
+    }
+    
+    .text-luxury-champagne {
+        color: oklch(var(--luxury-champagne));
+    }
+    
+    .text-luxury-white {
+        color: oklch(var(--luxury-white));
+    }
+    
+    .text-luxury-ivory {
+        color: oklch(var(--luxury-ivory));
+    }
+    
+    .bg-luxury-black {
+        background-color: oklch(var(--luxury-black));
+    }
+    
+    .bg-luxury-charcoal {
+        background-color: oklch(var(--luxury-charcoal));
+    }
+    
+    .bg-luxury-gold {
+        background-color: oklch(var(--luxury-gold));
+    }
+    
+    .bg-luxury-champagne {
+        background-color: oklch(var(--luxury-champagne));
+    }
+    
+    .bg-luxury-white {
+        background-color: oklch(var(--luxury-white));
+    }
+    
+    .bg-luxury-ivory {
+        background-color: oklch(var(--luxury-ivory));
+    }
+    
+    .border-luxury-gold {
+        border-color: oklch(var(--luxury-gold));
+    }
+}

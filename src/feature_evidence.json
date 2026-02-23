@@ -1,0 +1,139 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-update-addwatchform-component-to-support-uploading-up-to-5-images-per-watch-with-multiple-file-input-displaying-preview-thumbnails-for-each-uploaded-image-and-submitting-all-images-as-an-array-to-the-backend",
+      "featureTitle": "Update AddWatchForm component to support uploading up to 5 images per watch with multiple file input, displaying preview thumbnails for each uploaded image, and submitting all images as an array to the backend",
+      "files": [
+        "frontend/src/components/admin/AddWatchForm.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-27"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-editwatchmodal-component-to-support-uploading-multiple-replacement-images-up-to-5-total-displaying-existing-images-with-option-to-remove-individual-images-and-maintaining-image-array-on-backend-update",
+      "featureTitle": "Update EditWatchModal component to support uploading multiple replacement images (up to 5 total), displaying existing images with option to remove individual images, and maintaining image array on backend update",
+      "files": [
+        "frontend/src/components/admin/EditWatchModal.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-28"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-productcard-component-to-display-the-first-image-from-the-images-array-as-the-primary-thumbnail-on-product-listing-cards",
+      "featureTitle": "Update ProductCard component to display the first image from the images array as the primary thumbnail on product listing cards",
+      "files": [
+        "frontend/src/components/ProductCard.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-29"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-productdetailpage-component-at-route-products-id-that-displays-full-watch-details-including-name-company-model-price-gender-description-and-an-elegant-image-carousel-gallery-showing-all-watch-photos-with-smooth-transitions-and-luxury-styling",
+      "featureTitle": "Create a ProductDetailPage component at route /products/:id that displays full watch details including name, company, model, price, gender, description, and an elegant image carousel/gallery showing all watch photos with smooth transitions and luxury styling",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/pages/ProductDetailPage.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-30"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-productcard-component-to-be-clickable-and-navigate-to-the-product-detail-page-at-products-id-when-clicked",
+      "featureTitle": "Update ProductCard component to be clickable and navigate to the product detail page at /products/:id when clicked",
+      "files": [
+        "frontend/src/components/ProductCard.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-31"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-featuredwatches-component-to-display-the-first-image-from-images-array-for-each-featured-watch",
+      "featureTitle": "Update FeaturedWatches component to display the first image from images array for each featured watch",
+      "files": [
+        "frontend/src/components/FeaturedWatches.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-32"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-update-watchmanagementlist-component-in-admin-panel-to-display-the-first-image-from-images-array-as-thumbnail-for-each-watch-in-the-management-list",
+      "featureTitle": "Update WatchManagementList component in admin panel to display the first image from images array as thumbnail for each watch in the management list",
+      "files": [
+        "frontend/src/components/admin/WatchManagementList.tsx"
+      ],
+      "components": [
+        "blob-storage@4.0.0",
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-33"
+      ],
+      "confidence": "high"
+    }
+  ]
+}

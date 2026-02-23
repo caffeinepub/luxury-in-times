@@ -1,0 +1,139 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Add multiple photo upload and product detail page with image carousel",
+  "requirements": [
+    {
+      "id": "REQ-27",
+      "summary": "Update AddWatchForm component to support uploading up to 5 images per watch with multiple file input, displaying preview thumbnails for each uploaded image, and submitting all images as an array to the backend",
+      "acceptanceCriteria": [
+        "File input accepts multiple images (up to 5)",
+        "Preview thumbnails display for each selected image",
+        "Form validation ensures at least 1 image is uploaded",
+        "Form validation prevents more than 5 images",
+        "All images are converted to Uint8Array and submitted to backend as array",
+        "Maintains luxury black and gold styling consistent with existing admin forms"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/admin/AddWatchForm.tsx",
+          "operation": "modify",
+          "description": "Replace single file input with multiple file input accepting up to 5 images. Add state to track selected files array. Display preview thumbnails for each selected image with remove option. Update form validation to enforce 1-5 images. Convert all selected images to Uint8Array and submit as array to backend addWatch method. Use the blob-storage component's ExternalBlob class for image handling. Verify the component's usage instructions before implementing. Maintain existing luxury styling with gold accents and black background."
+        }
+      ]
+    },
+    {
+      "id": "REQ-28",
+      "summary": "Update EditWatchModal component to support uploading multiple replacement images (up to 5 total), displaying existing images with option to remove individual images, and maintaining image array on backend update",
+      "acceptanceCriteria": [
+        "Modal displays all existing images as thumbnails",
+        "User can remove individual existing images",
+        "User can add new images up to 5 total",
+        "Form prevents exceeding 5 images total",
+        "Updated image array is sent to backend on save",
+        "Maintains luxury styling consistent with existing modal"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/admin/EditWatchModal.tsx",
+          "operation": "modify",
+          "description": "Display all existing images from watch.images array as thumbnails with remove buttons. Add multiple file input for uploading new images. Track combined count of existing and new images, enforcing 5 total maximum. Convert new images to Uint8Array and merge with retained existing images. Submit complete images array to backend updateWatch method. Use the blob-storage component's ExternalBlob class for image handling. Verify the component's usage instructions before implementing. Maintain luxury dialog styling with gold accents."
+        }
+      ]
+    },
+    {
+      "id": "REQ-29",
+      "summary": "Update ProductCard component to display the first image from the images array as the primary thumbnail on product listing cards",
+      "acceptanceCriteria": [
+        "Product card displays images[0] as the main product image",
+        "Image conversion from Uint8Array to blob URL works correctly",
+        "Fallback handling if images array is empty",
+        "No visual regression from existing product card styling"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Update image rendering to use watch.images[0] instead of single image field. Use existing imageUtils.ts convertImageToUrl function to convert Uint8Array to blob URL. Add fallback for empty images array (placeholder or no-image state). Ensure cleanup of blob URLs when component unmounts. Maintain existing card styling and hover effects."
+        }
+      ]
+    },
+    {
+      "id": "REQ-30",
+      "summary": "Create a ProductDetailPage component at route /products/:id that displays full watch details including name, company, model, price, gender, description, and an elegant image carousel/gallery showing all watch photos with smooth transitions and luxury styling",
+      "acceptanceCriteria": [
+        "Route /products/:id displays detailed view of selected watch",
+        "Image carousel displays all images from the images array",
+        "Carousel supports navigation (next/previous buttons or dots)",
+        "Smooth transitions between images with luxury animations",
+        "Full watch details displayed: name, company, model, price, gender, description",
+        "Add to Cart button present and functional",
+        "Page uses black, gold, and white luxury color palette",
+        "Responsive design for mobile and desktop viewports",
+        "Loading state while fetching watch data",
+        "Error handling if watch not found"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/pages/ProductDetailPage.tsx",
+          "operation": "create",
+          "description": "Create new page component that fetches watch by ID using useActor hook and backend getWatch method. Build image carousel displaying all images from watch.images array with navigation controls (previous/next arrows and dot indicators). Convert images using imageUtils.ts functions. Display full watch details: name, company, modelNumber, price (formatted), gender, description. Include functional Add to Cart button using useCart hook. Apply luxury styling with black background, gold accents, and champagne/ivory text. Implement responsive grid layout for mobile and desktop. Show loading skeleton while fetching. Handle null watch response with error message. Use smooth transitions and luxury animations for carousel."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Register new route for ProductDetailPage at path /products/$id using TanStack Router's dynamic route syntax. Import ProductDetailPage component and add route configuration within routeTree. Place route alongside existing product listing route."
+        }
+      ]
+    },
+    {
+      "id": "REQ-31",
+      "summary": "Update ProductCard component to be clickable and navigate to the product detail page at /products/:id when clicked",
+      "acceptanceCriteria": [
+        "Clicking anywhere on the product card navigates to /products/:id route",
+        "Product ID is passed correctly in the route parameter",
+        "Add to Cart button still functions without triggering navigation",
+        "Hover effects indicate card is clickable"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/ProductCard.tsx",
+          "operation": "modify",
+          "description": "Wrap card content in Link component from TanStack Router targeting /products/$id route with watch.id as parameter. Add cursor-pointer class and enhanced hover effects. Prevent navigation propagation on Add to Cart button click using stopPropagation. Maintain existing luxury styling and add visual indication of clickability."
+        }
+      ]
+    },
+    {
+      "id": "REQ-32",
+      "summary": "Update FeaturedWatches component to display the first image from images array for each featured watch",
+      "acceptanceCriteria": [
+        "Featured watches display images[0] as thumbnail",
+        "Image conversion from Uint8Array works correctly",
+        "No visual regression from existing featured watches display"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/FeaturedWatches.tsx",
+          "operation": "modify",
+          "description": "Update image rendering to use watch.images[0] instead of single image field. Use existing imageUtils.ts convertImageToUrl function for Uint8Array to blob URL conversion. Add fallback handling for empty images array. Maintain existing grid layout and luxury styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-33",
+      "summary": "Update WatchManagementList component in admin panel to display the first image from images array as thumbnail for each watch in the management list",
+      "acceptanceCriteria": [
+        "Watch management list displays images[0] as thumbnail",
+        "All watch details remain visible",
+        "Edit and delete actions still function correctly"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/admin/WatchManagementList.tsx",
+          "operation": "modify",
+          "description": "Update thumbnail rendering to use watch.images[0] instead of single image field. Use existing imageUtils.ts convertImageToUrl function for image conversion. Add fallback for empty images array. Ensure edit and delete functionality remains intact. Maintain existing card layout and styling."
+        }
+      ]
+    }
+  ]
+}
